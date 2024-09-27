@@ -134,7 +134,7 @@ jobs:
           echo "CSV file: $csv_file"
           echo "Log file: $log_file"
           if [ -f "$csv_file" ]; then
-            python ./code/SMqC.py -s "$csv_file" -o "./data/${sub}/${run_part}" -sub "$sub" | tee "$log_file"
+            python ./code/SmqC.py -s "$csv_file" -o "./data/${sub}/${run_part}" -sub "$sub" | tee "$log_file"
             echo "QC for ${sub}_${task}_${vers} completed"
           else
             echo "CSV file $csv_file does not exist"
